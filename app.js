@@ -9,12 +9,10 @@ const port = process.env.PORT;
 const jwtSecret = process.env.JWT_SECRET;
 
 if (!jwtSecret) {
-    console.error("La clé secrète JWT n'est pas définie dans le fichier .env");
-    process.exit(1);
+  console.error("La clé secrète JWT n'est pas définie dans le fichier .env");
+  process.exit(1);
 }
 
-const port = process.env.PORT;
-
 app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });
